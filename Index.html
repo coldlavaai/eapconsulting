@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Home - Earlam &amp; Partners Consulting</title>
+  <meta name="description" content="At Earlam & Partners (EAP), we specialise in providing expert consultancy services to the cotton industry. Since 2010, we’ve been helping clients – from farmers to spinners – make informed decisions on both the futures and physical markets.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Home - Earlam &amp; Partners Consulting" />
+  <meta property="og:description" content="At Earlam & Partners (EAP), we specialise in providing expert consultancy services to the cotton industry." />
+  <meta property="og:url" content="https://eapconsult.com/" />
+  <meta property="og:site_name" content="Earlam & Partners Consulting" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://eapconsult.com/wp-content/uploads/2021/11/cropped-noun_Communication_3079916-04-32x32.png" sizes="32x32" />
+  <link rel="icon" href="https://eapconsult.com/wp-content/uploads/2021/11/cropped-noun_Communication_3079916-04-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://eapconsult.com/wp-content/uploads/2021/11/cropped-noun_Communication_3079916-04-180x180.png" />
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://eapconsult.com/wp-content/uploads/elementor/google-fonts/css/montserrat.css?ver=1750423162" />
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="https://eapconsult.com/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.4.4" />
+  <link rel="stylesheet" href="https://eapconsult.com/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.4.4" />
+  <link rel="stylesheet" href="https://eapconsult.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.30.4" />
+
+  <!-- Basic Full Width Fix -->
+  <style>
+    body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    .elementor-section.elementor-section-boxed > .elementor-container {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .elementor-section {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Containers for each section -->
+  <div id="hero-section"></div>
+  <div id="about-section"></div>
+  <div id="reports-section"></div>
+  <div id="team-section"></div>
+  <div id="clients-section"></div>
+  <div id="contact-section"></div>
+  <div id="footer-section"></div>
+
+  <!-- Loader script -->
+  <script>
+    function loadSection(id, file) {
+      const cacheBuster = '?v=' + new Date().getTime(); // Prevents browser from caching old version
+      fetch(file + cacheBuster)
+        .then(res => res.text())
+        .then(data => document.getElementById(id).innerHTML = data);
+    }
+
+    // Load all sections dynamically in order
+    loadSection('hero-section', 'Sections/Hero.html');
+    loadSection('about-section', 'Sections/About.html');
+    loadSection('reports-section', 'Sections/Reports.html');
+    loadSection('team-section', 'Sections/Team.html');
+    loadSection('clients-section', 'Sections/Clients.html');
+    loadSection('contact-section', 'Sections/Contact.html');
+    loadSection('footer-section', 'Sections/Footer.html');
+  </script>
+
+</body>
+</html>
